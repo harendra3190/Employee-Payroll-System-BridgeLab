@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1>Employee Payroll Dashboard</h1>
+
+    <a href="/add" class="btn">+ Add Employee</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Basic Salary</th>
+                <th>Tax (12%)</th>
+                <th>Net Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (employees.length === 0) { %>
+                <tr>
+                    <td colspan="6">No employees found</td>
+                </tr>
+            <% } %>
+
+            <% employees.forEach(emp => { 
+                const tax = emp.salary * 0.12;
+                const net = emp.salary - tax;
+            %>
+
+            <tr>
+                <td><%= emp.name %></td>
+                <td><%= emp.department %></td>
+                <td>₹ <%= emp.salary.toLocaleString() %></td>
+                <td>₹ <%= tax.toLocaleString() %></td>
+                <td>₹ <%= net.toLocaleString() %></td>
+                <td>
+                    <a href="/edit/<%= emp.id %>">Edit</a> |
+                    <a href="/delete/<%= emp.id %>" 
+                       onclick="return confirm('Are you sure you want to delete this employee?')">
+                       Delete
+                    </a>
+                </td>
+            </tr>
+
+            <% }) %>
+        </tbody>
+    </table>
+
+</body>
+</html>

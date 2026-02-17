@@ -1,0 +1,130 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #dbe6f6);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Add Employee Button */
+.btn {
+    display: block;
+    width: 180px;
+    margin: 0 auto 25px auto;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e8449;
+}
+
+/* Table */
+table {
+    width: 85%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+th {
+    background: #34495e;
+    color: white;
+    padding: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f7f9fc;
+}
+
+/* Action Links */
+td a {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+td a:first-child {
+    color: #2980b9;
+}
+
+td a:last-child {
+    color: #e74c3c;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.form {
+    width: 350px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form input:focus {
+    border-color: #27ae60;
+    outline: none;
+}
+
+/* Form Button */
+.form button {
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background: #1e8449;
+}

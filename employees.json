@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "department": "IT",
+    "salary": 60000
+  },
+  {
+    "id": 2,
+    "name": "Harsh",
+    "department": "majdoori",
+    "salary": 50
+  }
+]
